@@ -79,7 +79,8 @@ body {
 .header__container {
   text-align: center;
 }
-.header__action {
+
+#header-button {
   animation: moveInBottom 0.15s ease-out 0.85s backwards;
 }
 

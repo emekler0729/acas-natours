@@ -39,10 +39,10 @@ body {
     &__container {
         text-align: center;
     }
+}
 
-    &__action {
-        animation: moveInBottom 0.15s ease-out 0.85s backwards;
-    }
+#header-button {
+    animation: moveInBottom 0.15s ease-out 0.85s backwards;
 }
 
 .heading-hero {
