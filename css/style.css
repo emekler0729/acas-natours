@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: calc((10 / 16) * 100%);
+}
+
 .btn:link, .btn:visited {
   position: relative;
   text-transform: uppercase;
@@ -43,10 +47,6 @@
 }
 .btn--rounded, .btn--rounded::after {
   border-radius: 10rem;
-}
-
-html {
-  font-size: calc((10 / 16) * 100%);
 }
 
 body {
