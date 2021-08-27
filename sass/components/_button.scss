@@ -12,18 +12,18 @@
 
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
     }
 
     &:active {
         transform: translateY(-1px);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
     }
 
     &--white,
     &--white::after {
-        background: white;
-        color: $color-font;
+        background: $color-white;
+        color: $color-grey-dark;
     }
 
     &--pulse {
@@ -36,13 +36,14 @@
             top: 0;
             left: 0;
             z-index: -1;
-            transition: transform 0.4s,
-                        opacity 0.4s;
+            transition: transform 0s,
+                        opacity 0;
         }
 
         &:hover::after {
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
+            transition-duration: 0.4s;
         }
     }
 
