@@ -8,9 +8,9 @@
         max-width: $grid-width;
         display: flex;
         justify-content: space-between;
-        
+
         background: #eee;
-        
+
         &:not(:last-child) {
             margin-bottom: $gutter-vertical;
         }
@@ -18,8 +18,11 @@
         @for $total from 4 to 1 {
             @for $count from 1 to $total {
                 .col-#{$count}-of-#{$total} {
-                    width: calc(#{$count} * ((100% - (#{$gutter-horizontal} * (#{$total} - 1))) / #{$total}) + ((#{$count} - 1) * #{$gutter-horizontal}));
-                    background-color: orangered;
+                    width: calc(
+                        #{$count} *
+                            ((100% - (#{$gutter-horizontal} * (#{$total} - 1))) / #{$total}) +
+                            ((#{$count} - 1) * #{$gutter-horizontal})
+                    );
                 }
             }
         }
