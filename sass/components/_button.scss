@@ -2,12 +2,9 @@
     &:link,
     &:visited {
         position: relative;
-        text-transform: uppercase;
         text-decoration: none;
-        padding: 1.5rem 4rem;
         display: inline-block;
-        transition: transform 0.25s,
-                    box-shadow 0.25s;
+        transition: transform 0.25s, box-shadow 0.25s, background-color 0.25s, color 0.25s;
     }
 
     &:hover {
@@ -20,6 +17,17 @@
         box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
     }
 
+    &--primary,
+    &--primary::after {
+        color: $color-theme-medium;
+        border-bottom-color: $color-theme-medium;
+    }
+
+    &--primary:hover {
+        color: $color-white;
+        background: $color-theme-medium;
+    }
+
     &--white,
     &--white::after {
         background: $color-white;
@@ -28,7 +36,7 @@
 
     &--pulse {
         &::after {
-            content: '';
+            content: "";
             display: inline-block;
             height: 100%;
             width: 100%;
@@ -36,8 +44,7 @@
             top: 0;
             left: 0;
             z-index: -1;
-            transition: transform 0s,
-                        opacity 0;
+            transition: transform 0s, opacity 0s;
         }
 
         &:hover::after {
@@ -49,6 +56,23 @@
 
     &--rounded,
     &--rounded::after {
-       border-radius: 10rem;
+        border-radius: 10rem;
+    }
+
+    &--underline,
+    &--underline::after {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+    }
+
+    &--big,
+    &--big::after {
+        padding: 1.5rem 4rem;
+        text-transform: uppercase;
+    }
+
+    &--small,
+    &--small::after {
+        padding: 3px;
     }
 }
