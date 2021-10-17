@@ -3,6 +3,12 @@ $color-theme-light: #7ed56f;
 $color-theme-medium: #55c57a; // primary
 $color-theme-dark: #28b485;
 
+$color-sea-light: #ffb900;
+$color-sea-dark: #ff7730;
+
+$color-snow-light: #2998ff;
+$color-snow-dark: #5643fa;
+
 $color-grey-light-1: #f7f7f7;
 $color-grey-dark: #777;
 $color-white: #fff;
@@ -13,6 +19,10 @@ $default-font-size: 1.6rem;
 
 // MARGIN
 $margin-small: 1.5rem;
+$margin-large: 8rem;
+$margin-section: 25rem;
+$margin-section-small: 20rem;
+$margin-overlap: -20vh;
 
 // GRID
 $grid-width: 114rem;

@@ -14,9 +14,6 @@
     &__icon {
         font-size: 6rem;
         margin-bottom: 0.5rem;
-        background: linear-gradient(to right, $color-theme-light, $color-theme-dark);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+        @include gradient-text;
     }
 }

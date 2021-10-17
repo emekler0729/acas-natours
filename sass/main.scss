@@ -1,3 +1,4 @@
+@import "abstracts/mixins";
 @import "abstracts/variables";
 
 @import "base/animations";
@@ -5,6 +6,7 @@
 @import "base/typography";
 
 @import "components/button";
+@import "components/card";
 @import "components/composition";
 @import "components/feature-card";
 
