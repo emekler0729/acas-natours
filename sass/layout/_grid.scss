@@ -7,7 +7,7 @@
         width: 100%;
         max-width: $grid-width;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
         &:not(:last-child) {
             margin-bottom: $gutter-vertical;
