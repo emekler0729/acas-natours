@@ -47,13 +47,13 @@ body {
 
 .about {
     @extend %section-common;
+    margin-top: -20vh;
 }
 
 .features {
+    @extend %section-common;
     @include gradient-background($url: "../img/nat-4.jpg");
-
     padding: $margin-section-small 0;
-    margin-top: $margin-overlap;
 
     $skew: -7deg;
     transform: skewY($skew);

@@ -44,7 +44,7 @@ $card-height: 52rem;
                 @include gradient-background(
                     map.get($theme, "color", "start"),
                     map.get($theme, "color", "end"),
-                    $url: map.get($theme, "url")
+                    $url: map.get($card-urls, $name)
                 );
             }
         }

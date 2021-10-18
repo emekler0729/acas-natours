@@ -9,16 +9,16 @@
         transition: all 0.2s;
         outline-offset: 2rem;
 
-        &--p1 {
+        &:nth-child(1) {
             left: 0px;
             top: -2rem;
         }
 
-        &--p2 {
+        &:nth-child(2) {
             right: 0;
             top: 2rem;
         }
-        &--p3 {
+        &:nth-child(3) {
             left: 20%;
             top: 10rem;
         }
