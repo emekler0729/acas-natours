@@ -1,6 +1,10 @@
-@mixin gradient-img-background($url) {
-    background: linear-gradient(to right bottom, rgba($color-theme-light, 0.8), rgba($color-theme-dark, 0.8)),
-        url($url) top / cover;
+@mixin gradient-background($color-start: $color-theme-light, $color-end: $color-theme-dark, $alpha: 0.8, $url: null) {
+    @if $url == null {
+        background: linear-gradient(to right bottom, rgba($color-start, $alpha), rgba($color-end, $alpha));
+    } @else {
+        background: linear-gradient(to right bottom, rgba($color-start, $alpha), rgba($color-end, $alpha)),
+            url($url) top / cover;
+    }
 }
 
 @mixin gradient-text($color-start: $color-theme-light, $color-end: $color-theme-dark) {

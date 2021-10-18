@@ -119,11 +119,15 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-.btn--primary, .btn--primary::after {
+.btn--invert-primary, .btn--invert-primary::after {
   color: #55c57a;
   border-bottom-color: #55c57a;
 }
-.btn--primary:hover {
+.btn--invert-primary:hover {
+  color: #fff;
+  background: #55c57a;
+}
+.btn--primary, .btn--primary::after {
   color: #fff;
   background: #55c57a;
 }
@@ -165,10 +169,10 @@ body {
 .card {
   perspective: 150rem;
   position: relative;
-  height: 50rem;
+  height: 52rem;
 }
 .card__side {
-  height: 50rem;
+  height: 52rem;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
@@ -176,25 +180,98 @@ body {
   width: 100%;
   backface-visibility: hidden;
   border-radius: 3px;
+  overflow: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 .card__side--back {
-  transform: rotateY(180deg);
-}
-.card__side--back--sea {
-  background: linear-gradient(to right bottom, #ffb900, #ff7730);
-}
-.card__side--back--theme {
-  background: linear-gradient(to right bottom, #7ed56f, #28b485);
-}
-.card__side--back--snow {
-  background: linear-gradient(to right bottom, #2998ff, #5643fa);
+  transform: rotateY(-180deg);
 }
 .card:hover .card__side--front {
   transform: rotateY(180deg);
 }
 .card:hover .card__side--back {
   transform: rotateY(0deg);
+}
+.card__picture {
+  height: 23rem;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card__picture--sea {
+  background: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url("../img/nat-5.jpg") top/cover;
+}
+.card__picture--theme {
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-6.jpg") top/cover;
+}
+.card__picture--snow {
+  background: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)), url("../img/nat-7.jpg") top/cover;
+}
+.card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  width: 75%;
+}
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.card__heading-span--sea {
+  background: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+.card__heading-span--theme {
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
+}
+.card__heading-span--snow {
+  background: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
+}
+.card__details {
+  padding: 3rem;
+}
+.card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.card__side--back {
+  display: grid;
+  place-items: center;
+}
+.card__side--back--sea {
+  background: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8));
+}
+.card__side--back--theme {
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+}
+.card__side--back--snow {
+  background: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8));
+}
+.card__cta {
+  text-align: center;
+  color: #fff;
+}
+.card__only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.card__price {
+  font-size: 6rem;
+  font-weight: 100;
+  margin-bottom: 8rem;
 }
 
 .composition {

@@ -1,6 +1,9 @@
-$card-height: 50rem;
+@use "sass:map";
+@use "sass:math";
+$card-height: 52rem;
 
 .card {
+    // Flip functionality
     perspective: 150rem;
     position: relative;
     height: $card-height;
@@ -14,25 +17,11 @@ $card-height: 50rem;
         width: 100%;
         backface-visibility: hidden;
         border-radius: 3px;
+        overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
-        &--front {
-        }
-
         &--back {
-            transform: rotateY(180deg);
-
-            &--sea {
-                background: linear-gradient(to right bottom, $color-sea-light, $color-sea-dark);
-            }
-
-            &--theme {
-                background: linear-gradient(to right bottom, $color-theme-light, $color-theme-dark);
-            }
-
-            &--snow {
-                background: linear-gradient(to right bottom, $color-snow-light, $color-snow-dark);
-            }
+            transform: rotateY(-180deg);
         }
     }
 
@@ -42,5 +31,100 @@ $card-height: 50rem;
 
     &:hover &__side--back {
         transform: rotateY(0deg);
+    }
+
+    // Front Styling
+    &__picture {
+        height: 23rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        @each $name, $theme in $themes {
+            &--#{$name} {
+                @include gradient-background(
+                    map.get($theme, "color", "start"),
+                    map.get($theme, "color", "end"),
+                    $url: map.get($theme, "url")
+                );
+            }
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        @each $name, $theme in $themes {
+            &--#{$name} {
+                @include gradient-background(
+                    map.get($theme, "color", "start"),
+                    map.get($theme, "color", "end"),
+                    $alpha: 0.85
+                );
+            }
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            }
+        }
+    }
+
+    // Back Styling
+    &__side {
+        &--back {
+            display: grid;
+            place-items: center;
+
+            @each $name, $theme in $themes {
+                &--#{$name} {
+                    @include gradient-background(map.get($theme, "color", "start"), map.get($theme, "color", "end"));
+                }
+            }
+        }
+    }
+
+    &__cta {
+        text-align: center;
+        color: $color-white;
+    }
+
+    &__only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price {
+        font-size: 6rem;
+        font-weight: 100;
+        margin-bottom: 8rem;
     }
 }

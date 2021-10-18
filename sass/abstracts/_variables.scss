@@ -10,9 +10,34 @@ $color-snow-light: #2998ff;
 $color-snow-dark: #5643fa;
 
 $color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
 $color-grey-dark: #777;
 $color-white: #fff;
 $color-black: #000;
+
+$themes: (
+    "sea": (
+        "color": (
+            "start": $color-sea-light,
+            "end": $color-sea-dark,
+        ),
+        "url": "../img/nat-5.jpg",
+    ),
+    "theme": (
+        "color": (
+            "start": $color-theme-light,
+            "end": $color-theme-dark,
+        ),
+        "url": "../img/nat-6.jpg",
+    ),
+    "snow": (
+        "color": (
+            "start": $color-snow-light,
+            "end": $color-snow-dark,
+        ),
+        "url": "../img/nat-7.jpg",
+    ),
+);
 
 // FONT
 $default-font-size: 1.6rem;

@@ -17,15 +17,24 @@
         box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
     }
 
-    &--primary,
-    &--primary::after {
+    &--invert-primary,
+    &--invert-primary::after {
         color: $color-theme-medium;
         border-bottom-color: $color-theme-medium;
     }
 
-    &--primary:hover {
+    &--invert-primary:hover {
         color: $color-white;
         background: $color-theme-medium;
+    }
+
+    &--primary,
+    &--primary::after {
+        color: $color-white;
+        background: $color-theme-medium;
+    }
+
+    &--primary:hover {
     }
 
     &--white,
