@@ -70,4 +70,6 @@ body {
 .stories {
     @extend %section-common;
     padding: $margin-section-xs 0;
+    position: relative;
+    background-color: transparent;
 }
