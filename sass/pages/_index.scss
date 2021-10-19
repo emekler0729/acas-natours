@@ -36,6 +36,11 @@ body {
     padding: $margin-section-md 0;
     margin-top: $margin-overlap;
 
+    &:hover .heading-secondary {
+        transform: translateY(-10px) scale(1.1);
+        text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+    }
+
     .heading-secondary {
         margin-bottom: $margin-large;
     }
@@ -45,13 +50,15 @@ body {
     }
 }
 
-.about {
+.section {
     @extend %section-common;
+}
+
+.about {
     margin-top: -20vh;
 }
 
 .features {
-    @extend %section-common;
     @include gradient-background($url: "../img/nat-4.jpg");
     padding: $margin-section-sm 0;
 
@@ -63,13 +70,42 @@ body {
     }
 }
 
-.tours {
-    @extend %section-common;
-}
-
 .stories {
-    @extend %section-common;
     padding: $margin-section-xs 0;
     position: relative;
     background-color: transparent;
+}
+
+.book {
+    @include gradient-background($alpha: 1);
+    padding: $margin-section-xs 0;
+
+    .heading-secondary {
+        text-align: left;
+        margin-bottom: $margin-medium;
+    }
+
+    &__container {
+        background-image: linear-gradient(
+                105deg,
+                rgba($color-white, 0.9) 0%,
+                rgba($color-white, 0.9) 50%,
+                transparent 50.2%
+            ),
+            url(../img/nat-10.jpg);
+        background-size: cover;
+        border-radius: $border-radius;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+        width: 100%;
+    }
+
+    &__content {
+        width: 50%;
+        padding: 6rem;
+    }
+
+    .btn {
+        margin-top: $margin-medium;
+    }
 }

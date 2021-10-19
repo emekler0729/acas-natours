@@ -30,7 +30,7 @@
         </header>
 
         <main>
-            <section class="about container">
+            <section class="section about container">
                 <h2 class="heading-secondary">Exciting tours for adventurous people</h2>
                 <div class="row">
                     <div class="col-1-of-2">
@@ -56,7 +56,7 @@
                 </div>
             </section>
 
-            <section class="features container">
+            <section class="section features container">
                 <div class="row">
                     <div class="col-1-of-4">
                         <div class="feature-card">
@@ -89,7 +89,7 @@
                 </div>
             </section>
 
-            <section class="tours container">
+            <section class="section tours container">
                 <h2 class="heading-secondary">Most popular tours</h2>
                 <div class="row">
                     <div class="col-1-of-3">
@@ -174,7 +174,7 @@
                 <a href="#" class="btn btn--primary btn--big btn--rounded btn--pulse">Discover all tours</a>
             </section>
 
-            <section class="stories container">
+            <section class="section stories container">
                 <div class="bg-video">
                     <video class="bg-video__content" autoplay muted loop>
                         <source src="img/video.mp4" type="video/mp4">
@@ -216,6 +216,39 @@
                     </div>
                 </div>
                 <a href="#" class="btn btn--invert-primary btn--small btn--underline">Read all stories &rarr;</a href="#">
+            </section>
+
+            <section class="section book container">
+                <div class="row">
+                    <div class="book__container">
+                        <div class="book__content">
+                            <h3 class="heading-secondary">Start booking now</h3>
+                            <form action="#" class="form">
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Full name" id="name" required>
+                                    <label for="name" class="form__label">Full name</label>
+                                </div>
+                                <div class="form__group">
+                                    <input class="form__input" type="email" id="email" placeholder="Email Address" required>
+                                    <label class="form__label" for="email">Email Address</label>
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__radio-group">
+                                        <input type="radio" name="size" id="small" class="form__radio-input">
+                                        <label for="small" class="form__radio-label"><span class="form__radio-button"></span>Small tour group</label>
+                                    </div>
+                                    <div class="form__radio-group">
+                                        <input type="radio" name="size" id="large" class="form__radio-input">
+                                        <label for="large" class="form__radio-label"><span class="form__radio-button"></span>Large tour group</label>
+                                    </div>
+                                </div>
+                                <div class="from__group">
+                                    <button class="btn btn--primary btn--rounded btn--big btn--pulse">Next Steps &rarr;</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     </body>
