@@ -6,7 +6,7 @@
         text-decoration: none;
         display: inline-block;
         transition: transform 0.25s, box-shadow 0.25s, background-color 0.25s, color 0.25s;
-        border: none;
+        border: none; // Remove this and apply to only <button> elements
         cursor: pointer;
     }
 
@@ -18,8 +18,11 @@
     &:active,
     &:focus {
         outline: none;
-        transform: translateY(-1px);
         box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+
+    &:active {
+        transform: translateY(-1px);
     }
 
     &--invert-primary,
