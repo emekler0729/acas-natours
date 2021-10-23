@@ -20,11 +20,11 @@
             <div class="navigation__background">&nbsp;</div>
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natours</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+                    <li class="navigation__item"><a href="#section-about" class="navigation__link"><span>01</span>About Natours</a></li>
+                    <li class="navigation__item"><a href="#section-features" class="navigation__link"><span>02</span>Your benefits</a></li>
+                    <li class="navigation__item"><a href="#section-tours" class="navigation__link"><span>03</span>Popular tours</a></li>
+                    <li class="navigation__item"><a href="#section-stories" class="navigation__link"><span>04</span>Stories</a></li>
+                    <li class="navigation__item"><a href="#section-book" class="navigation__link"><span>05</span>Book now</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,14 +37,14 @@
                     <span class="heading-hero__title">Outdoors</span>
                     <span class="heading-hero__subtitle">Is where life happens</span>
                 </h1>
-                <a href="#" class="btn btn--big btn--white btn--pulse btn--rounded" id="header-button">
+                <a href="#section-tours" class="btn btn--big btn--white btn--pulse btn--rounded" id="header-button">
                     Discover our tours
                 </a>
             </div>
         </header>
 
         <main>
-            <section class="section about container">
+            <section class="section about container" id="section-about">
                 <h2 class="heading-secondary">Exciting tours for adventurous people</h2>
                 <div class="row">
                     <div class="col-1-of-2">
@@ -70,7 +70,7 @@
                 </div>
             </section>
 
-            <section class="section features container">
+            <section class="section features container" id="section-features">
                 <div class="row">
                     <div class="col-1-of-4">
                         <div class="feature-card">
@@ -103,7 +103,7 @@
                 </div>
             </section>
 
-            <section class="section tours container">
+            <section class="section tours container" id="section-tours">
                 <h2 class="heading-secondary">Most popular tours</h2>
                 <div class="row">
                     <div class="col-1-of-3">
@@ -127,7 +127,7 @@
                                 <div class="card__cta">
                                     <p class="card__only">Only</p>
                                     <p class="card__price">$297</p>
-                                    <a href="#" class="btn btn--white btn--pulse btn--rounded btn--big"> Book now! </a>
+                                    <a href="#booking-modal" class="btn btn--white btn--pulse btn--rounded btn--big"> Book now! </a>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                                 <div class="card__cta">
                                     <p class="card__only">Only</p>
                                     <p class="card__price">$497</p>
-                                    <a href="#" class="btn btn--white btn--pulse btn--rounded btn--big"> Book now! </a>
+                                    <a href="#booking-modal" class="btn btn--white btn--pulse btn--rounded btn--big"> Book now! </a>
                                 </div>
                             </div>
                         </div>
@@ -179,7 +179,7 @@
                                 <div class="card__cta">
                                     <p class="card__only">Only</p>
                                     <p class="card__price">$897</p>
-                                    <a href="#" class="btn btn--white btn--pulse btn--rounded btn--big"> Book now! </a>
+                                    <a href="#booking-modal" class="btn btn--white btn--pulse btn--rounded btn--big"> Book now! </a>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +188,7 @@
                 <a href="#" class="btn btn--primary btn--big btn--rounded btn--pulse">Discover all tours</a>
             </section>
 
-            <section class="section stories container">
+            <section class="section stories container"id="section-stories">
                 <div class="bg-video">
                     <video class="bg-video__content" autoplay muted loop>
                         <source src="img/video.mp4" type="video/mp4">
@@ -232,7 +232,7 @@
                 <a href="#" class="btn btn--invert-primary btn--small btn--underline">Read all stories &rarr;</a href="#">
             </section>
 
-            <section class="section book container">
+            <section class="section book container" id="section-book">
                 <div class="row">
                     <div class="book__container">
                         <div class="book__content">
@@ -289,5 +289,31 @@
                 </div>
             </div>
         </footer>
+
+        <div class="modal" id="booking-modal">
+            <div class="modal__content container">
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <img src="img/nat-8.jpg" alt="Picture of Mary Smith" class="modal__img">
+                        <img src="img/nat-9.jpg" alt="Picture of Jack Wilson" class="modal__img">
+                    </div>
+                    <div class="col-2-of-3">
+                        <a href="#section-tours" class="modal__close">&times;</a>
+                        <h2 class="heading-secondary">
+                            Start Booking Now
+                        </h2>
+                        <h3 class="heading-tertiary">
+                            Important &ndash; Please read the terms and conditions first
+                        </h3>
+                        <p class="paragraph modal__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam consequatur ullam, eligendi eos doloribus at saepe dolore tempore quidem debitis deserunt similique consequuntur laborum error veniam, tenetur reprehenderit exercitationem. Harum?
+                            Aliquam consequatur eos quidem facere alias dignissimos sed consectetur cumque, blanditiis dicta quod ipsa eaque nobis fugit fuga ullam in ab iusto! Excepturi, dolores enim nesciunt impedit obcaecati inventore accusamus.
+                        </p>
+                        <a href="#section-book" class="btn btn--primary btn--big btn--rounded btn--pulse">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </body>
 </html>
