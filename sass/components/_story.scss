@@ -11,6 +11,20 @@
     transform: skewX($skew);
     & > * {
         transform: skewX(-$skew);
+
+        @include media(sm) {
+            transform: skewX(0);
+        }
+    }
+
+    @include media(md) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include media(sm) {
+        transform: skewX(0);
     }
 
     &__shape {
@@ -23,6 +37,10 @@
         shape-outside: $circle;
         clip-path: $circle;
         transform: translateX(-3rem) skewX(-$skew);
+
+        @include media(sm) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__img {

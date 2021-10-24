@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @function percent($size) {
-    @return $size / 16px * 100%;
+    @return math.div($size, 16px) * 100%;
 }

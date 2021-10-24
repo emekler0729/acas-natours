@@ -126,14 +126,41 @@ body {
         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 
         width: 100%;
+
+        @include media(lg) {
+            background-image: linear-gradient(
+                    105deg,
+                    rgba($color-white, 0.9) 0%,
+                    rgba($color-white, 0.9) 65%,
+                    transparent 65.2%
+                ),
+                url(../img/nat-10.jpg);
+        }
+
+        @include media(md) {
+            background-image: linear-gradient(to right, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 100%),
+                url(../img/nat-10.jpg);
+        }
     }
 
     &__content {
         width: 50%;
         padding: 6rem;
+
+        @include media(lg) {
+            width: 70%;
+        }
+
+        @include media(md) {
+            width: 100%;
+        }
     }
 
     .btn {
         margin-top: $margin-medium;
+
+        @include media(md) {
+            margin-top: $margin-small;
+        }
     }
 }

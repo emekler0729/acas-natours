@@ -1,3 +1,5 @@
+@use "sass:math";
+
 *,
 *::after,
 *::before {
@@ -8,16 +10,20 @@
 
 html {
     font-size: percent(10px);
+    $rem-scale: math.div(10, 10);
 
     @include media(xl) {
         font-size: percent(12px);
+        $rem-scale: math.div(12, 10);
     }
 
     @include media(lg) {
         font-size: percent(9px);
+        $rem-scale: math.div(9, 10);
     }
 
     @include media(md) {
         font-size: percent(8px);
+        $rem-scale: math.div(8, 10);
     }
 }
