@@ -14,3 +14,28 @@
     -webkit-background-clip: text;
     color: transparent;
 }
+
+$breakpoints: (
+    "sm": calc(600 / 16 * 1em),
+    "md": calc(900 / 16 * 1em),
+    "lg": calc(1200 / 16 * 1em),
+    "xl": calc(1800 / 16 * 1em),
+);
+
+@mixin media($breakpoint) {
+    @each $name, $size in $breakpoints {
+        @if $breakpoint != xl {
+            @if $breakpoint == #{$name} {
+                @media (max-width: $size) {
+                    @content;
+                }
+            }
+        }
+    }
+
+    @if $breakpoint == xl {
+        @media (min-width: 1800px) {
+            @content;
+        }
+    }
+}

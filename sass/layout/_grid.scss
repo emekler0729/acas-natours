@@ -9,8 +9,21 @@
         display: flex;
         justify-content: space-around;
 
+        @include media(md) {
+            max-width: 50rem;
+            padding: 0 3rem;
+        }
+
+        @include media(md) {
+            flex-wrap: wrap;
+        }
+
         &:not(:last-child) {
             margin-bottom: $gutter-vertical;
+
+            @include media(md) {
+                margin-bottom: $gutter-vertical-sm;
+            }
         }
 
         @for $total from 4 to 1 {
@@ -21,6 +34,11 @@
                             ((100% - (#{$gutter-horizontal} * (#{$total} - 1))) / #{$total}) +
                             ((#{$count} - 1) * #{$gutter-horizontal})
                     );
+
+                    @include media(md) {
+                        width: 100%;
+                        margin-bottom: $gutter-vertical-sm;
+                    }
                 }
             }
         }

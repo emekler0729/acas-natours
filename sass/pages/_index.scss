@@ -1,5 +1,9 @@
 body {
     padding: 3rem;
+
+    @include media(md) {
+        padding: 0;
+    }
 }
 
 .header {
@@ -10,6 +14,10 @@ body {
     display: grid;
     grid-template: 75vh auto / 100%;
     place-items: center;
+
+    @include media(sm) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0% 100%);
+    }
 
     &__brand {
         position: absolute;
@@ -36,6 +44,10 @@ body {
     padding: $margin-section-md 0;
     margin-top: $margin-overlap;
 
+    @include media(md) {
+        padding: $margin-section-sm 0;
+    }
+
     &:hover .heading-secondary {
         transform: translateY(-10px) scale(1.1);
         text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
@@ -43,6 +55,10 @@ body {
 
     .heading-secondary {
         margin-bottom: $margin-large;
+
+        @include media(md) {
+            margin-bottom: 6rem;
+        }
     }
 
     .heading-tertiary {
@@ -62,6 +78,10 @@ body {
     @include gradient-background($url: "../img/nat-4.jpg");
     padding: $margin-section-sm 0;
 
+    @include media(md) {
+        padding: 10rem 0;
+    }
+
     $skew: -7deg;
     transform: skewY($skew);
 
@@ -80,9 +100,17 @@ body {
     @include gradient-background($alpha: 1);
     padding: $margin-section-xs 0;
 
+    @include media(md) {
+        padding: 10rem 0;
+    }
+
     .heading-secondary {
         text-align: left;
         margin-bottom: $margin-medium;
+
+        @include media(md) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__container {

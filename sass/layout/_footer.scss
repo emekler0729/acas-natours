@@ -4,8 +4,16 @@
     font-size: 1.4rem;
     color: $color-grey-light-1;
 
+    @include media(md) {
+        padding: 8rem 0;
+    }
+
     &__brand {
         margin-bottom: $margin-large;
+
+        @include media(md) {
+            margin-bottom: 6rem;
+        }
     }
 
     &__logo {
@@ -18,6 +26,10 @@
         border-top: 1px solid $color-grey-dark-1;
         padding-top: 2rem;
         display: inline-block;
+
+        @include media(md) {
+            text-align: center;
+        }
     }
 
     &__list {
@@ -54,5 +66,10 @@
     &__copyright {
         width: 85%;
         float: right;
+
+        @include media(md) {
+            width: 100%;
+            float: none;
+        }
     }
 }
